@@ -3,5 +3,7 @@
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
         <file>Titlebar.qml</file>
+        <file>ActionButton.qml</file>
+        <file>Line.qml</file>
     </qresource>
 </RCC>

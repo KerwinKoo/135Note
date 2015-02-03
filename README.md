@@ -13,6 +13,16 @@
     ...
 目前一步一步来，有后续需求再补充...
 
+v0.1.2:
+    已知BUG：
+        main.qml中Titlebar onStateChanged无法对点击做出响应。
+    Line.qml:
+        用作修饰线类
+    ActionButton.qml:
+        一个可重用的按钮，它可以是一个图标按钮，也可以是文字按钮，也可以是两者的叠加。
+        图片：等比缩放，需要在定义Image对象时指定其长宽，否则等比设定无效。
+        文字：文字的大小将根据按钮的大小自动缩放。
+
 v0.1.1：
     fixed Column不显示titlebar的bug
     

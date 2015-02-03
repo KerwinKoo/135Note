@@ -9,7 +9,7 @@ Window {
     MainForm {
         anchors.fill: parent
         mouseArea.onClicked: {
-            Qt.quit();
+//            Qt.quit();
         }
 
     }
@@ -27,6 +27,14 @@ Window {
             id:titlebar
             width:mainwindow.width
             anchors.top: parent.top
+            onStateChanged: {
+                if(state == 'default'){
+                    console.debug('state changed:', titlebar.state)
+                }else if(state == 'adding'){
+                    console.debug('state changed else:', titlebar.state)
+                }
+
+            }
         }
     }
 
