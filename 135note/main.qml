@@ -3,11 +3,49 @@ import QtQuick.Window 2.2
 
 Window {
     visible: true
+    width: 480
+    height: 1024
     MainForm {
         anchors.fill: parent
         mouseArea.onClicked: {
             Qt.quit();
         }
 
+    }
+
+    Rectangle{
+        id:backgroundColor
+        anchors.fill: parent
+        color: "#70B0D0"
+        z:0
+
+    }
+
+
+    Column{
+        Titlebar{
+            id:titlebar
+            z:1
+        }
+    }
+
+    Component.onCompleted: {
+        var list = todoCpp.getItems()
+        console.debug(JSON.stringify(list))
+        for(var i=0; i<list.length; i++)
+        {
+            console.debug("hello",i)
+        }
+    }
+
+    function saveItems(){
+        var lsit = []
+        for(var i=0; i<list.length; i++)
+        {
+            List.push({'pri': ListModel.get(i).iPri,
+                          'text': ListModel.get(i).iText,
+                          'done': ListModel.get(i).iDone})
+        }
+        todoCpp.saveItems(list)
     }
 }

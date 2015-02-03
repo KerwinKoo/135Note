@@ -5,7 +5,8 @@ QT += qml quick
 SOURCES += main.cpp \
     TodoCpp.cpp
 
-RESOURCES += qml.qrc
+RESOURCES += qml.qrc \
+    assets.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -14,6 +15,7 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 DISTFILES += \
+    Titlebar.qml
 
 HEADERS += \
     TodoCpp.h
