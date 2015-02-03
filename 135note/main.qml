@@ -2,6 +2,7 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 
 Window {
+    id:mainwindow
     visible: true
     width: 480
     height: 1024
@@ -16,16 +17,16 @@ Window {
     Rectangle{
         id:backgroundColor
         anchors.fill: parent
-        color: "#70B0D0"
+        color: "#929E9D"
         z:0
 
     }
 
-
     Column{
         Titlebar{
             id:titlebar
-            z:1
+            width:mainwindow.width
+            anchors.top: parent.top
         }
     }
 

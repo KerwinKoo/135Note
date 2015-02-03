@@ -13,7 +13,8 @@
     ...
 目前一步一步来，有后续需求再补充...
 
-方块米有弄好
+v0.1.1：
+    fixed Column不显示titlebar的bug
     
 v0.1:
     第一个启动版本。
@@ -24,15 +25,17 @@ v0.1:
     TodoCpp.cpp:
         为QML层提供基础的功能接口
         函数：void TodoCpp::saveItems(const QVariantList &list)
-        保存items list
+            保存items list
         函数：QVariantList TodoCpp::getItems()
-        读取items list
+            读取items list
         
     main.qml:
         函数：function saveItems()
-        保存事项记录。
+            保存事项记录。
         对象：Rectangle backgroundColor
-        用于显示背景颜色，此处用途模糊。
+            用于显示背景颜色，此处用途模糊。
+        对象：Column：
+            增加title标题栏并设置宽度，如果不设置宽度，Column会认为不显示此栏
         
     main.cpp:
         增加QML调用C++对象的接口：engine.rootContext()->setContextProperty("todoCpp", &cpp);

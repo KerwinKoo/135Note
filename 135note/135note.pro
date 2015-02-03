@@ -15,7 +15,6 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 DISTFILES += \
-    Titlebar.qml
 
 HEADERS += \
     TodoCpp.h
